@@ -1,3 +1,7 @@
+.home {
+  width: 100vw;
+  height: 100vh;
+}
 .home__text {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 20px;
@@ -5,4 +9,8 @@
   line-height: 40px;
   font-weight: 100;
   color: rgb(76, 7, 7);
+}
+.home__img {
+  width: 50vw;
+  height: 100vh;
 }/*# sourceMappingURL=MainHome.css.map */

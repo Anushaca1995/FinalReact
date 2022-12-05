@@ -12,6 +12,11 @@
         font-size: 1rem;
         line-height: 1.2rem;
         padding: 0.6rem;
+        &--signup{
+            margin-left: 2rem;
+            text-decoration: none;
+            color:rgb(135, 165, 156);
+        }
     }
     &__anchor{
         text-decoration: none;

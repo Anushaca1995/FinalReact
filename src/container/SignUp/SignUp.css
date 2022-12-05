@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Lato&family=Outfit:wght@400;500;600&family=Roboto&display=swap");
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0.5rem 0;
+  display: inline-block;
+  width: 100%;
+}
+
+button {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 2.1rem;
+}
+
+h2 {
+  font-size: 1.65rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    font-size: 110%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  :root {
+    font-size: 120%;
+  }
+}
+.signUp {
+  width: 50vw;
+  margin: auto;
+  padding: auto;
+  margin-top: 5rem;
+}
+.signUp__header {
+  color: rgb(14, 14, 89);
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  font-style: bold;
+  margin-bottom: 2rem;
+}
+.signUp__text {
+  font-family: "Lato", sans-serif;
+  color: #5b6d7d;
+  display: flex;
+}
+.signUp__text--account {
+  font-size: 0.8rem;
+  width: 9rem;
+  color: #8896a3;
+}
+.signUp__button {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 0 1rem 0;
+}
+.signUp__input--password {
+  height: 50rem;
+}/*# sourceMappingURL=SignUp.css.map */

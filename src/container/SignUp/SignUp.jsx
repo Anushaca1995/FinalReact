@@ -1,18 +1,12 @@
-import "./SignIn.scss";
+import "./SignUp.scss";
 import Button from "../../components/Button/Button";
 import InputBox from "../../components/InputBox/InputBox";
 import { Link } from "react-router-dom";
 
-const SignIn = () =>{
+const SignUp = () =>{
     return (
         <div className="signUp">
-          <div className="signUp__form">
-            <div className="signUp__contents">
-    
-              <h1 className="signUp__header">Create an account</h1>
-              <p className="signUp__headerText">
-               Please Enter your emailid and set a password.
-              </p>
+              <h1 className="signUp__header">Sign Up</h1>
     
               <div className="signUp__input">
                 <InputBox
@@ -34,25 +28,14 @@ const SignIn = () =>{
                 />
               </div>
     
-              <div className="signUp__text">
-                <p className="signUp__text signUp__text--account">
-                  Already have an account?
-                </p>
-                <Link className="signUp__text signUp__text--login">
-                  Login
-                </Link>
-              </div>
-    
-              <div className="signUp__continue">
+              <div className="signUp__button">
                 <Button
                   buttonClass="largeButton"
-                  buttonText="Continue  >"
+                  buttonText="Sign Up"
                 />
               </div>
-            </div>
-          </div>
         </div>
       );
 }
 
-export default SignIn;
+export default SignUp;

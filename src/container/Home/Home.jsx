@@ -1,5 +1,6 @@
 import MainHome from "../../components/MainHome/MainHome";
 import NavBar from "../../components/NavBar/NavBar";
+import SignUp from "../SignUp/SignUp";
 
 
 const Home = () => {
