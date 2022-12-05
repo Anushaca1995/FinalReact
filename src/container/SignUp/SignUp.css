@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter&family=Lato&family=Outfit:wght@400;500;600&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Lato&family=Outfit:wght@400;500;600&family=Roboto&family=Secular+One&display=swap");
 * {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
@@ -49,7 +49,7 @@ h3 {
 }
 .signUp__header {
   color: rgb(14, 14, 89);
-  font-family: "Outfit", sans-serif;
+  font-family: "Secular One", sans-serif;
   font-weight: 500;
   font-size: 2rem;
   font-style: bold;

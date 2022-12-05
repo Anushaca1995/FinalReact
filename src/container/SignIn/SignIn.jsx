@@ -5,7 +5,7 @@ import InputBox from "../../components/InputBox/InputBox";
 const SignIn = () => {
   return (
     <div className="signIn">
-      <h1 className="signIn__header">Sign Up</h1>
+      <h1 className="signIn__header">Login</h1>
       <div className="signIn__input">
         <InputBox
           className="signIn__input signIn__input--email"
