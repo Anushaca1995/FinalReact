@@ -1,0 +1,39 @@
+@use "../../styles/variables" as *;
+@use "../../styles/typography" as *;
+
+.input {
+  font-family: $font-heading;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+
+  &__title {
+    color: $color-text;
+  }
+  &__input {
+    color: $color-input-text;
+    background: $color-input-background;
+    margin: 0.2rem;
+    border: 1px solid $color-input-border;
+    border-radius: 6px;
+    height: 2rem;
+    padding-left: 1rem;
+  }
+
+  &__message {
+    font-size: 0.6rem;
+    line-height: 0.8rem;
+    height: 0.1rem;
+
+    &--error {
+      color: $color-error-input;
+    }
+
+    &--success {
+      color: $color-success-input;
+    }
+  }
+}

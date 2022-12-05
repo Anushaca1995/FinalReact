@@ -1,0 +1,28 @@
+.navList {
+  list-style: none;
+  padding: 50px;
+  background-color: rgb(4, 47, 33);
+}
+.navList__listItem {
+  display: inline;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  padding: 0.6rem;
+}
+.navList__anchor {
+  text-decoration: none;
+}
+.navList__anchor--unselected {
+  color: rgb(135, 165, 156);
+}
+.navList__anchor--footer-selected {
+  color: rgb(40, 40, 178);
+  text-decoration: none;
+}
+.navList__anchor--header-selected {
+  color: gray;
+  text-decoration: none;
+}/*# sourceMappingURL=NavBar.css.map */

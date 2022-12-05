@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Lato&family=Outfit:wght@400;500;600&family=Roboto&display=swap");
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0.5rem 0;
+  display: inline-block;
+  width: 100%;
+}
+
+button {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 2.1rem;
+}
+
+h2 {
+  font-size: 1.65rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    font-size: 110%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  :root {
+    font-size: 120%;
+  }
+}
+.input {
+  font-family: "Outfit", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+.input__title {
+  color: #5b6d7d;
+}
+.input__input {
+  color: #a6afbd;
+  background: #fbfbfc;
+  margin: 0.2rem;
+  border: 1px solid #e2e2e2;
+  border-radius: 6px;
+  height: 2rem;
+  padding-left: 1rem;
+}
+.input__message {
+  font-size: 0.6rem;
+  line-height: 0.8rem;
+  height: 0.1rem;
+}
+.input__message--error {
+  color: #df1c1c;
+}
+.input__message--success {
+  color: #57e141;
+}/*# sourceMappingURL=InputBox.css.map */
