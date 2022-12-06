@@ -1,10 +1,12 @@
 import "./SignUp.scss";
 import Button from "../../components/Button/Button";
 import InputBox from "../../components/InputBox/InputBox";
-import { Link } from "react-router-dom";
+import NavBar from "../../components/NavBar/NavBar";
 
 const SignUp = () => {
   return (
+    <>
+    <NavBar/>
     <div className="signUp">
       <h1 className="signUp__header">Sign Up</h1>
       <div className="signUp__input">
@@ -34,6 +36,7 @@ const SignUp = () => {
         />
       </div>
     </div>
+    </>
   );
 }
 

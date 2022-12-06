@@ -1,9 +1,12 @@
 import "./SignIn.scss";
 import Button from "../../components/Button/Button";
 import InputBox from "../../components/InputBox/InputBox";
+import NavBar from "../../components/NavBar/NavBar";
 
 const SignIn = () => {
   return (
+    <>
+    <NavBar/>
     <div className="signIn">
       <h1 className="signIn__header">Login</h1>
       <div className="signIn__input">
@@ -27,6 +30,7 @@ const SignIn = () => {
         />
       </div>
     </div>
+    </>
   );
 }
 

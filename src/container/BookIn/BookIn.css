@@ -41,13 +41,13 @@ h3 {
     font-size: 120%;
   }
 }
-.signUp {
+.bookIn {
   width: 50vw;
   margin: auto;
   padding: auto;
   margin-top: 1rem;
 }
-.signUp__header {
+.bookIn__header {
   color: rgb(14, 14, 89);
   font-family: "Secular One", sans-serif;
   font-weight: 500;
@@ -55,21 +55,21 @@ h3 {
   font-style: bold;
   margin-bottom: 2rem;
 }
-.signUp__text {
+.bookIn__text {
   font-family: "Lato", sans-serif;
   color: #5b6d7d;
   display: flex;
 }
-.signUp__text--account {
+.bookIn__text--account {
   font-size: 0.8rem;
   width: 9rem;
   color: #8896a3;
 }
-.signUp__button {
+.bookIn__button {
   display: flex;
   justify-content: flex-end;
   padding: 1rem 0 1rem 0;
 }
-.signUp__input--password {
+.bookIn__input--password {
   height: 50rem;
-}/*# sourceMappingURL=SignUp.css.map */
+}/*# sourceMappingURL=BookIn.css.map */
