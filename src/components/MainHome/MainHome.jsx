@@ -2,7 +2,7 @@ import "./MainHome.scss";
 import epcImage from "../../assets/images/R.jpg";
 import NavBar from "../NavBar/NavBar";
 
-const MainHome = () => {
+const MainHome = ({user}) => {
 return(
     <div className="home">
         <img className="home__img" src={epcImage}></img>
@@ -11,7 +11,7 @@ return(
 
       An EPC provides property owners with insight into the energy saving potential of a building. Utility costs are increasingly a driver of operating costs; initiatives that reduce the energy consumption of a building will have a direct impact on operating costs. Energy Performance Certificates will help to identify those buildings where the greatest potential for energy cost savings exists and funds can be directed to harvest these opportunities.
       </p>
-      <NavBar isFooter={true}/>
+      <NavBar user={user}/>
     </div>
 )
 

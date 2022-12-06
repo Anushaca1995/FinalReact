@@ -2,10 +2,10 @@ import "./BookIn.scss";
 import NavBar from "../../components/NavBar/NavBar"; "../../components/NavBar/NavBar";
 import InputBox from "../../components/InputBox/InputBox";
 import Button from "../../components/Button/Button";
-const BookIn = () =>{
+const BookIn = ({user}) =>{
     return(
         <>
-        <NavBar/>
+        <NavBar user={user}/>
         <div className="bookIn">
       <h1 className="bookIn__header">Book In</h1>
       <div className="bookIn__input">

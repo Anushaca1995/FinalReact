@@ -1,14 +1,14 @@
 import MainHome from "../../components/MainHome/MainHome";
 import NavBar from "../../components/NavBar/NavBar";
-import SignUp from "../SignUp/SignUp";
 
 
-const Home = () => {
+
+const Home = ({user}) => {
   return (
    <div>
     <header className="landing-header">
-      <NavBar/>
-      <MainHome/>
+      <NavBar user={user}/>
+      <MainHome user={user}/>
     </header>
    </div>
   );

@@ -3,10 +3,10 @@ import Button from "../../components/Button/Button";
 import InputBox from "../../components/InputBox/InputBox";
 import NavBar from "../../components/NavBar/NavBar";
 
-const SignUp = () => {
+const SignUp = ({user}) => {
   return (
     <>
-    <NavBar/>
+    <NavBar user={user}/>
     <div className="signUp">
       <h1 className="signUp__header">Sign Up</h1>
       <div className="signUp__input">
