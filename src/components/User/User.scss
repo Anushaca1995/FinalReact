@@ -1,0 +1,22 @@
+@use "../../styles/variables" as *;
+
+.user {
+  margin: 0 auto;
+  padding: 10px;
+  background-color: whitesmoke;
+  color: $color-heading;
+  border-radius: 5px;
+  height: 100%;
+
+  &__title {
+    font-size: 22px;
+    margin: 0;
+    color: $color-heading;
+  }
+
+  &__text {
+    font-size: 15px;
+    font-weight: lighter;
+    color: $color-heading;
+  }
+}
