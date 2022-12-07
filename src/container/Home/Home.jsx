@@ -3,11 +3,11 @@ import NavBar from "../../components/NavBar/NavBar";
 
 
 
-const Home = ({user}) => {
+const Home = ({user, saveUser}) => {
   return (
    <div>
     <header className="landing-header">
-      <NavBar user={user}/>
+      <NavBar user={user} setUser={saveUser}/>
       <MainHome user={user}/>
     </header>
    </div>

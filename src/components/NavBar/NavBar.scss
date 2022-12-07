@@ -4,6 +4,9 @@
     list-style: none;
     padding:50px;
     background-color: rgb(4, 47, 33);
+    &__button{
+        margin-right: 0;
+    }
     &__listItem {
         display: inline;
         font-family: Arial, Helvetica, sans-serif;

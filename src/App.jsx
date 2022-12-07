@@ -14,8 +14,8 @@ function App() {
     <div className="App">
      <Router>
       <Routes>
-        <Route path="*" element={<Home user={user}/>} />
-        <Route path="/signup" element={<SignUp user={user}/>} />
+        <Route path="*" element={<Home user={user} saveUser={setUser}/>} />
+        <Route path="/signup" element={<SignUp user={user} saveUser={setUser}/>} />
         <Route path="/login" element={<SignIn saveUser={setUser}/>} />
         <Route path="/bookin" element={<BookIn user={user}/>} />
         <Route path="/userlist" element={<ViewUser user={user}/>} />
