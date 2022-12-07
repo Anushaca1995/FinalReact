@@ -9,7 +9,7 @@ import User from './components/User/User';
 import ViewUser from './container/ViewUser/ViewUser';
 import { useState } from 'react';
 function App() {
-  const [user, setUser] = useState(false);
+  const [user, setUser] = useState();
   return (
     <div className="App">
      <Router>

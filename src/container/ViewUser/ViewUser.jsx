@@ -9,9 +9,9 @@ const ViewUser = ({user}) =>{
   const getUsers = async () => {
     let url = "http://localhost:8080/users";
     const response = await fetch(url);
-    const greetingData = await response.json();
-    console.log(greetingData);
-    setUsers(greetingData);
+    const data = await response.json();
+    console.log(data);
+    setUsers(data);
   };
 
  

@@ -16,8 +16,10 @@ const SignIn = ({saveUser}) => {
   const validateEmail = () => {
     if (!emailRegex.test(email)) {
       alert("Please enter a valid email");
+      return false;
     } else {
       setValidEmail(email);
+      return true;
     }
   };
 
@@ -31,19 +33,35 @@ const SignIn = ({saveUser}) => {
 
 
   const handleLogin = async () => {
-    validateEmail();
-    if (validEmail != "") {
-      let url = `http://localhost:8080/user/email/${validEmail}`;
+    const flag=validateEmail();
+    let data = "";
+    if (flag) {
+      try{
+         data = login();
+      } catch (err) {
+        console.log('error', err);
+      }
+      
+    }
+  }
+
+  const login = async () =>{
+    try{
+      let url = `http://localhost:8080/user/email/${email}`;
       const response = await fetch(url);
-      const greetingData = await response.json();
-      if(pwd==greetingData.pwd){
-        saveUser(true);
+      const data = await response.json();
+      if(pwd==data.pwd){
+        saveUser(data.id);
         alert("Login Successful");
         navigate("/userlist");
       } else{
         alert("Incorrect emailid or password");
       }
+      return data.pwd;
+    } catch(e){
+      console.log('error', e);
     }
+    
   }
 
   return (

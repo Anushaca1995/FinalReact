@@ -19,8 +19,10 @@ const SignUp = ({ user, saveUser }) => {
   const validateEmail = () => {
     if (!emailRegex.test(email)) {
       alert("Please enter a valid email");
+      return false;
     } else {
       setValidEmail(email);
+      return true;
     }
   };
 
@@ -50,16 +52,45 @@ const SignUp = ({ user, saveUser }) => {
 
 
   const handleSignIn = async () => {
-    validateEmail();
-    if (pwd.length > 5) {
-      if (name==""){
-        alert("Name should not be empty");
+    const flag = validateEmail();
+    if (flag){
+      if (pwd.length > 5) {
+        if (name==""){
+          alert("Name should not be empty");
+        }
+        else if (address == "" || code == "") {
+          alert("Address and post code should not be empty");
+        } 
+        else if (validEmail != "" && pwd == confirm) {
+          checkUser();
+        }
+      } else {
+        alert("Please enter atleast 6 characters on password field");
       }
-      else if (address == "" || code == "") {
-        alert("Address and post code should not be empty");
-      } 
-      else if (validEmail != "" && pwd == confirm) {
-        const url = "http://localhost:8080/user";
+    } 
+
+  }
+
+  const checkUser = async () =>{
+    try{
+      let url = `http://localhost:8080/user/email/${email}`;
+      const response = await fetch(url);
+      const data = await response.json();
+      console.log(typeof data.id);
+      if(typeof data.id == "number"){
+        alert("exist");
+      }
+      return data.id;
+    } catch(e){
+      console.log('error', e);
+      signUp();
+    }
+    
+  }
+
+  const signUp = async () =>{
+    try{
+      const url = "http://localhost:8080/user";
         const res = await fetch(url, {
           method: 'POST',
           headers: {
@@ -69,19 +100,19 @@ const SignUp = ({ user, saveUser }) => {
           body: JSON.stringify({
             email_id: email,
             pwd: pwd,
-            address: '',
-            middleNames: '',
+            address: address,
+            postcode: code,
           })
         });
         const json = await res.json();
         alert("SignUp Successful");
         saveUser(true);
         navigate("/userlist");
-      }
-    } else {
-      alert("Please enter atleast 6 characters on password field");
-    }
 
+    } catch(e){
+      console.log('error', e);
+    }
+    
   }
 
   return (
