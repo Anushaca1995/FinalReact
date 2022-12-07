@@ -3,7 +3,7 @@ import UserList from "../UserList/UserList";
 import { useState, useEffect } from "react";
 import NavBar from "../../components/NavBar/NavBar";
 
-const ViewUser = ({user}) =>{
+const ViewUser = ({user, saveUser}) =>{
   const [users, setUsers] = useState([]);
 
   const getUsers = async () => {
@@ -23,7 +23,7 @@ const ViewUser = ({user}) =>{
 
   return (
     <>
-    <NavBar user={user}/>
+    <NavBar user={user} setUser={saveUser}/>
       <section className="view">
         {user&&<h2 className="view-users__title">All The Users ...</h2>}
        {user?<UserList users={users} />:<h3 className="view__text">Please login first</h3>} 

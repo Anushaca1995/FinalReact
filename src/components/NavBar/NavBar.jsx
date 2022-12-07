@@ -8,7 +8,7 @@ const NavBar = ({ user , setUser }) => {
     const navigate = useNavigate();
 
     const handleSignOut = () =>{
-       setUser(false);
+       setUser("");
        navigate("*");
     }
 
