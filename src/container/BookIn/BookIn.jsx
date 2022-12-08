@@ -3,7 +3,7 @@ import NavBar from "../../components/NavBar/NavBar"; "../../components/NavBar/Na
 import InputBox from "../../components/InputBox/InputBox";
 import Button from "../../components/Button/Button";
 import { useState } from "react";
-const BookIn = ({ user }) => {
+const BookIn = ({ user}) => {
   const [book, setBook] = useState("");
   const handleDate = (event) => {
     setBook(event.target.value);
@@ -52,7 +52,6 @@ const BookIn = ({ user }) => {
   };
   return (
     <>
-      <NavBar user={user} />
       <div className="bookIn">
         <h1 className="bookIn__header">Book In</h1>
         <div className="bookIn__input">

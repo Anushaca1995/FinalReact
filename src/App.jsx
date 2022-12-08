@@ -8,17 +8,20 @@ import BookIn from './container/BookIn/BookIn';
 import User from './components/User/User';
 import ViewUser from './container/ViewUser/ViewUser';
 import { useState } from 'react';
+import NavBar from './components/NavBar/NavBar';
 function App() {
   const [user, setUser] = useState();
+  const [isAdmin, setIsAdmin] = useState(false);
   return (
     <div className="App">
+      
      <Router>
       <Routes>
-        <Route path="*" element={<Home user={user} saveUser={setUser}/>} />
-        <Route path="/signup" element={<SignUp user={user} saveUser={setUser}/>} />
-        <Route path="/login" element={<SignIn saveUser={setUser}/>} />
-        <Route path="/bookin" element={<BookIn user={user}/>} />
-        <Route path="/userlist" element={<ViewUser user={user} saveUser={setUser}/>} />
+        <Route path="*" element={<><NavBar user={user} setUser={setUser} isAdmin={isAdmin} setIsAdmin={setIsAdmin}/><Home user={user} saveUser={setUser} isAdmin={isAdmin}/></>} />
+        <Route path="/signup" element={<><NavBar user={user} setUser={setUser} isAdmin={isAdmin} setIsAdmin={setIsAdmin}/><SignUp saveUser={setUser} setIsAdmin={setIsAdmin}/></>} />
+        <Route path="/login" element={<><NavBar user={user} setUser={setUser} isAdmin={isAdmin} setIsAdmin={setIsAdmin}/><SignIn saveUser={setUser} setIsAdmin={setIsAdmin}/></>} />
+        <Route path="/bookin" element={<><NavBar user={user} setUser={setUser} isAdmin={isAdmin} setIsAdmin={setIsAdmin}/><BookIn user={user}/></>} />
+        <Route path="/userlist" element={isAdmin && <><NavBar user={user} setUser={setUser} isAdmin={isAdmin} setIsAdmin={setIsAdmin} /><ViewUser user={user} /></>} />
         <Route path="/user" element={<User/>} />
       </Routes>
      </Router>

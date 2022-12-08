@@ -5,7 +5,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const SignUp = ({ user, saveUser }) => {
+const SignUp = ({  saveUser, setIsAdmin}) => {
   const emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
@@ -107,7 +107,12 @@ const SignUp = ({ user, saveUser }) => {
         const json = await res.json();
         alert("SignUp Successful");
         saveUser(true);
-        navigate("/userlist");
+        setIsAdmin(false);
+        if(data.isAdmin){
+          navigate("/userlist");
+        } else{
+          navigate("*");
+        }
 
     } catch(e){
       console.log('error', e);
@@ -117,7 +122,6 @@ const SignUp = ({ user, saveUser }) => {
 
   return (
     <>
-      <NavBar user={user} />
       <div className="signUp">
         <h1 className="signUp__header">Sign Up</h1>
         <div className="signUp__input">

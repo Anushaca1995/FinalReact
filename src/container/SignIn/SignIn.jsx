@@ -6,7 +6,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-const SignIn = ({saveUser}) => {
+const SignIn = ({saveUser, setIsAdmin}) => {
   const emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
@@ -52,8 +52,14 @@ const SignIn = ({saveUser}) => {
       const data = await response.json();
       if(pwd==data.pwd){
         saveUser(data.id);
-        alert("Login Successful");
-        navigate("/userlist");
+        setIsAdmin(data.isAdmin);
+        alert("Login Successful ");
+        if(data.isAdmin){
+          navigate("/userlist");
+        } else{
+          navigate("*");
+        }
+        
       } else{
         alert("Incorrect emailid or password");
       }
@@ -66,7 +72,6 @@ const SignIn = ({saveUser}) => {
 
   return (
     <>
-      <NavBar />
       <div className="signIn">
         <h1 className="signIn__header">Login</h1>
         <div className="signIn__input">
