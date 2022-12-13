@@ -19,6 +19,7 @@ const NavBar = ({ user , setUser, isAdmin, setIsAdmin }) => {
             <Link className="navList__listItem--link" to={"/bookin"}>Book An Appointment</Link>
             {!user && <Link className="navList__listItem--link" to={"/signup"}>Sign Up</Link>}
             {!user && <Link className="navList__listItem--link" to={"/login"}>Login</Link>}
+            {isAdmin && <Link className="navList__listItem--link" to={"/notifications"}>Notifications</Link>}
             {isAdmin && <Link className="navList__listItem--link" to={"/userlist"}>Users</Link>}
            {user && <Button className="navList__button"
             buttonClass="corneredButton"
