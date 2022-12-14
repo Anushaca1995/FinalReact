@@ -9,6 +9,7 @@ import User from './container/User/User';
 import ViewUser from './container/ViewUser/ViewUser';
 import { useState } from 'react';
 import NavBar from './components/NavBar/NavBar';
+import Notifications from './container/Notifications/Notifications';
 
 function App() {
   const [user, setUser] = useState();
@@ -24,7 +25,7 @@ function App() {
         <Route path="/bookin" element={<><NavBar user={user} setUser={setUser} isAdmin={isAdmin} setIsAdmin={setIsAdmin}/><BookIn user={user}/></>} />
         <Route path="/userlist" element={<><NavBar user={user} setUser={setUser} isAdmin={isAdmin} setIsAdmin={setIsAdmin} /><ViewUser user={user} /></>} />
         <Route path="/user" element={<User/>} />
-        <Route path="/notifications" element={<><NavBar user={user} setUser={setUser} isAdmin={isAdmin} setIsAdmin={setIsAdmin} /><h3>Appointments on today</h3></>} />
+        <Route path="/notifications" element={<><NavBar user={user} setUser={setUser} isAdmin={isAdmin} setIsAdmin={setIsAdmin} /><h3>Appointments on today</h3><Notifications user={user}/></>} />
       </Routes>
      </Router>
     </div>

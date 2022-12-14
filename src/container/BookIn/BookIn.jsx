@@ -1,5 +1,4 @@
 import "./BookIn.scss";
-import NavBar from "../../components/NavBar/NavBar"; "../../components/NavBar/NavBar";
 import InputBox from "../../components/InputBox/InputBox";
 import Button from "../../components/Button/Button";
 import { useState } from "react";

@@ -1,7 +1,6 @@
 import "./SignUp.scss";
 import Button from "../../components/Button/Button";
 import InputBox from "../../components/InputBox/InputBox";
-import NavBar from "../../components/NavBar/NavBar";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -63,6 +62,8 @@ const SignUp = ({  saveUser, setIsAdmin}) => {
         } 
         else if (validEmail != "" && pwd == confirm) {
           checkUser();
+        } else{
+          alert("Confirm password field should match to password field");
         }
       } else {
         alert("Please enter atleast 6 characters on password field");
@@ -84,6 +85,7 @@ const SignUp = ({  saveUser, setIsAdmin}) => {
     } catch(e){
       console.log('error', e);
       signUp();
+      navigate("*");
     }
     
   }
@@ -102,6 +104,7 @@ const SignUp = ({  saveUser, setIsAdmin}) => {
             pwd: pwd,
             address: address,
             postcode: code,
+            full_Name: name
           })
         });
         const json = await res.json();

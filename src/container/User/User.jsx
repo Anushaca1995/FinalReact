@@ -2,7 +2,7 @@ import UserData from "../../components/UserData/UserData";
 import "./User.scss";
 
 const User = ({ user }) => {
-  const { email_id, address, postcode, book_date } = user;
+  const { full_Name, email_id, address, postcode, book_date } = user;
   let time, date = "";
   let dateObj = new Date();
   let month = String(dateObj.getMonth() + 1).padStart(2, '0');
@@ -21,7 +21,7 @@ const User = ({ user }) => {
   }
   return (
     <div className="user">
-     <UserData email_id={email_id} address={address} postcode={postcode} date={date} time={time} />
+     <UserData full_Name={full_Name} email_id={email_id} address={address} postcode={postcode} date={date} time={time} />
     </div>
   );
 };
