@@ -2,7 +2,7 @@
 
 
 
-♥ Application for EPC ♥
+♥  Application for EPC 
 
 ♦   I have created an EPC company website to book an appointment, login, signup, about and notifications page.
 
