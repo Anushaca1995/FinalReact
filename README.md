@@ -2,19 +2,21 @@
 
 
 
-♥  Application for EPC 
+Application for EPC 
 
-♦   I have created an EPC company website to book an appointment, login, signup, about and notifications page.
 
-♦   An admin can only see all the User list and notifications, which contains appointments on today. 
 
-♦   An admin can change the status of user also. He can change complete / Open status on each user.
+    ♦   I have created an EPC company website to book an appointment, login, signup, about and notifications page.
 
-♦   User can see only about and book an appointment section. It contains a calender to book an appointment.
+    ♦   An admin can only see all the User list and notifications, which contains appointments on today. 
 
-♦   A customer needs to sign up or login to book an appointment. He can sign out also.
+    ♦   An admin can change the status of user also. He can change complete / Open status on each user.
 
-♦   All the API section is controlled by springboot and MySQL server.
+    ♦   User can see only about and book an appointment section. It contains a calender to book an appointment.
+
+    ♦   A customer needs to sign up or login to book an appointment. He can sign out also.
+
+    ♦   All the API section is controlled by springboot and MySQL server.
 
 
 
