@@ -1,12 +1,13 @@
 @use "./variables" as *;
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Lato&family=Outfit:wght@400;500;600&family=Roboto&family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap');
 
 $font-heading: 'Outfit', sans-serif;
 $font-main: 'Inter', sans-serif;
 $font-link: 'Roboto', sans-serif;
 $font-login-text: 'Lato', sans-serif;
 $font-header: 'Secular One', sans-serif;
-
+$font-logo: 'Diplomata SC', sans-serif;
 * {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;

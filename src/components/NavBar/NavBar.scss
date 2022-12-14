@@ -1,10 +1,11 @@
-
+@use "../../styles/variables" as *;
+@use "../../styles/typography" as *;
 
 .navList{
     margin-top:0rem;
     list-style: none;
     padding:50px;
-    background-color: rgb(4, 47, 33);
+    background-color: rgb(144, 179, 195);
     &__button{
         margin-right: 0;
         color: green;
@@ -15,26 +16,34 @@
         font-style: normal;
         font-weight: 400;
         font-size: 1rem;
-        line-height: 1.2rem;
+        line-height: 2rem;
         padding: 0.6rem;
+        &--logo{
+            margin-left: -15rem;
+            padding: 1rem;
+            font-family: $font-logo;
+            font-size: 1rem;
+            color: bisque;
+            text-decoration: none;
+        }
         &--link{
             margin-left: 2rem;
             text-decoration: none;
-            color:rgb(135, 165, 156);
+            color:bisque;
         }
     }
     &__anchor{
         text-decoration: none;
         &--unselected{
-            color: rgb(135, 165, 156);
+            color: rgb(92, 176, 151);
         }
         &--footer-selected{
-            color: rgb(40, 40, 178);
+            color: rgb(98, 98, 158);
             text-decoration: none;
         }
         
         &--header-selected{
-            color:gray;
+            color:rgb(116, 129, 132);
             text-decoration: none;
         }
     }

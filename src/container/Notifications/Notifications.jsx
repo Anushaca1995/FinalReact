@@ -18,7 +18,7 @@ const Notifications = ({user}) =>{
 
       return (<>
       <section className="view">
-       {user?<UserList users={users} />:<h3 className="view__text">Please login first</h3>} 
+       {user?<UserList users={users} />:<h3 className="view__text">Sorry Admin View Only</h3>} 
       </section>
       </>);
     

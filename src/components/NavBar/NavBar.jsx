@@ -15,6 +15,7 @@ const NavBar = ({ user , setUser, isAdmin, setIsAdmin }) => {
 
     return(
         <ul className="navList">
+            <Link className="navList__listItem--logo" to={"*"}>London EPC</Link>
             <Link className="navList__listItem--link" to={"*"}>Home</Link>
             <Link className="navList__listItem--link" to={"/bookin"}>Book An Appointment</Link>
             {!user && <Link className="navList__listItem--link" to={"/signup"}>Sign Up</Link>}

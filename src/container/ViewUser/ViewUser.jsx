@@ -10,14 +10,12 @@ const ViewUser = ({user}) =>{
 
   const handleInput = (event) => {
     setSearchTerm(event.target.value);
-    console.log("search "+searchTerm);
   }
   const getUsers = async (searchTerm) => {
     let url = "http://localhost:8080/users";
     if(searchTerm!= ''){
       url = `http://localhost:8080/user/search/${searchTerm}`;
     }
-    console.log(url+ " "+searchTerm);
     const response = await fetch(url);
     const data = await response.json();
     setUsers(data);
@@ -26,7 +24,6 @@ const ViewUser = ({user}) =>{
  
 
   useEffect(() => {
-    console.log("In use effet "+searchTerm);
     getUsers(searchTerm);
   }, [searchTerm]);
 
