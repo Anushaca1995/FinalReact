@@ -1,32 +1,21 @@
 # FinalReact
 
-Pseudocode
-
-Applicattion for EPC
-
-Front End
-
-1. Home Page with EPC image, text and book button.
-
-2. About Page with EPC assessor details
-
-3. Contact us page contains a form.
-
-4. EPC describes about EPC.
-
-5. Book button to book an appointment.
-
-6. Sign In page to signin
-
-7. SignUp page to signup
 
 
-Back End
+Application for EPC
 
-1. Sign In api
+I have created an EPC company website to book an appointment, login, signup, about and notifications page.
 
-2. Sign Up api
+An admin can only see all the User list and notifications, which contains appointments on today. 
 
-3. Book appointment api
+An admin can change the status of user also. He can change complete / Open status on each user.
 
-4. Store user emailid, password and appointment date into user table
+User can see only about and book an appointment section. It contains a calender to book an appointment.
+
+A customer needs to sign up or login to book an appointment. He can sign out also.
+
+All the API section is controlled by springboot and MySQL server.
+
+
+
+
